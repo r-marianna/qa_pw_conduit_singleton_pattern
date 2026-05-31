@@ -35,7 +35,7 @@ export class Logger {
 
   static getInstance(level = 'error') {
     if (!Logger.#instance) {
-      const logger = new Logger();
+      const logger = new Logger(level);
       Logger.#instance = logger;
       console.log('New Logger instance is created');
     }
